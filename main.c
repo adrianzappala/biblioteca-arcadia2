@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,6 +7,7 @@
 #include "socios.h"
 #include "prestamos.h"
 #include "estructuras.h"
+#include "reportes.h"
 
 /* Busca el ID de un socio a partir de su nombre */
 int obtenerIdSocio(const char nombre[], char idSocio[])
@@ -128,6 +128,7 @@ void menuEmpleado(void)
         printf("-----------------------------------\n");
         printf("20. Gestion de socios\n");
         printf("21. Gestion de prestamos\n");
+        printf("22. Reportes\n");
         printf("0. Salir\n");
 
         printf("\nSeleccione una opcion: ");
@@ -224,6 +225,10 @@ void menuEmpleado(void)
 
             case 21:
                 menuPrestamos();
+                break;
+
+            case 22:
+                menuReportes();
                 break;
 
             case 0:
